@@ -1,6 +1,6 @@
 ### FRONTEND DEVELOPER
 
-![It's me](/eto-ya.jpg)
+![It's me](/iamges/eto-ya.jpg)
 
 1. Yana Tomkovich
 2. - Email: tomkovich2345@yandex.by

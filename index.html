@@ -2,9 +2,125 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My CV</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
-  <body></body>
+
+  <body>
+    <div class="container">
+      <header class="header">
+        <nav>
+          <div class="header-item"><a href="#name">Name</a></div>
+          <div class="header-item"><a href="#contacts">Contacts</a></div>
+          <div class="header-item"><a href="#bio">Bio</a></div>
+          <div class="header-item"><a href="#skills">Skills</a></div>
+        </nav>
+      </header>
+      <h1>The best developer in the Galaxy Yana Tomkovich</h1>
+      <main>
+        <ul>
+          <li>
+            <h2>Photo:</h2>
+            <div class="photo">
+              <img src="./images/eto-ya.jpg" alt="Yana Tomkovich" />
+            </div>
+          </li>
+          <li id="name">
+            <h2>Name:</h2>
+            <span>Yana Tomkovich</span>
+          </li>
+          <li id="contacts">
+            <h2>Contacts:</h2>
+            <span>
+              * Email: tomkovich2345@yandex.by <br />
+              * Mobile: +375(44) 222-32-32 <br />
+              * Telegram: @c_ronaldo
+            </span>
+          </li>
+          <li id="bio">
+            <h2>Bio:</h2>
+            <span>
+              My experience in web development has been over 2 years. Dozens of
+              projects have been done, more than 100,000 lines of code have been
+              written. In my free time I try to learn new technologies, read
+              articles from the field of web development. I have deep knowledge
+              of HTML, CSS, JS. Also from the world of JavaScript, I like
+              various technologies such as React, Vue, Angular. Using the
+              ReactJS framework, I have completed many projects.
+            </span>
+          </li>
+          <li id="skills">
+            <span> Skills: </span>
+            HTML, CSS, JS, PHP, GIT, ReactJS, NextJS, Redux
+          </li>
+          <li>
+            <h2>Code Example</h2>
+            <a href="https://github.com/tomkovich/watchshop"
+              >You can see here</a
+            >
+            <a href="https://github.com/tomkovich/frontender"> or here </a>
+
+            <pre class="line-numbers">
+                <code class="language-javascript">
+                    const tools = ["rock", "paper", "scissors"];
+
+                    const getRandomNumber = (min, max) => Math.floor(Math.random() * (max - min + 1) + min);
+                    
+                    const userAnswer = prompt("Rock, paper or scissors?");
+                    const randomIndex = getRandomNumber(0, 2);
+                    const computerAnswer = tools[randomIndex];
+                    
+                    const startGame = (userAnswer, computerAnswer) => {
+                      const answer = userAnswer.toLowerCase();
+                      if (!answer || !tools.includes(answer)) return "Bad answer!";
+                    
+                      let res = "";
+                    
+                      const isDraw = answer === computerAnswer;
+                      const isUserWin =
+                        (answer === "rock" && computerAnswer === "scissors") ||
+                        (answer === "paper" && computerAnswer === "rock") ||
+                        (answer === "scissors" && computerAnswer === "paper");
+                    
+                      if (isDraw) res = "It's draw";
+                      else if (isUserWin) res = "You won";
+                      else res = "You lose";
+                    
+                      return res;
+                    };
+                    
+                    const result = startGame(userAnswer, computerAnswer);
+                </code>
+             </pre>
+          </li>
+          <li>
+            <h2>Experience</h2>
+            <span> Work in a IT-company, freelance projects, bootcamp JS </span>
+          </li>
+          <li>
+            <h2>Courses</h2>
+            <span> Udemy courses, Online course RS-School </span>
+          </li>
+          <li>
+            <h2>English</h2>
+            <span> B2 English level </span>
+          </li>
+        </ul>
+      </main>
+
+      <footer class="footer">
+        <div class="footer-list">
+          <div class="footer-item">
+            <a href="https://github.com/tomkovich">My Github</a>
+          </div>
+          <div class="footer-item">All rights reserved &copy; 2022</div>
+          <div class="footer-item">
+            <a href="https://rs.school/js-stage0/">
+              <img src="./images/rs_school_js.svg" alt="RS SCHOOL" />
+            </a>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
 </html>
